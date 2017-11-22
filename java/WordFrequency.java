@@ -2,8 +2,9 @@ import java.io.*;
 import java.util.*;
 
 public class WordFrequency {
-  public static void main(String[] args) {
-    String sentence = "Marshall came Marshall saw Marshall conquered";
+    String sentence = "Marshall came, Marshall saw, Marshall conquered.";
+    sentence = sentence.replaceAll("[,.]", "");
+
     String[] words = sentence.split(" ");
 
     TreeMap<String, Integer> frequency = new TreeMap<String, Integer>();
